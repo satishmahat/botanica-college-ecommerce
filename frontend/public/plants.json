@@ -1,0 +1,202 @@
+[
+  {
+    "_id": 1,
+    "title": "Monstera Deliciosa",
+    "description": "A stunning tropical plant with large, glossy leaves. Perfect for adding a touch of the jungle to your home.",
+    "category": "indoor-plants",
+    "trending": true,
+    "coverImage": "monstera.jpg",
+    "oldPrice": 49,
+    "newPrice": 39
+  },
+  {
+    "_id": 2,
+    "title": "Succulent Assortment",
+    "description": "A collection of 6 small succulents in cute pots. Low-maintenance and perfect for desks or shelves.",
+    "category": "indoor-plants",
+    "trending": true,
+    "coverImage": "succulents.jpg",
+    "oldPrice": 29,
+    "newPrice": 19
+  },
+  {
+    "_id": 3,
+    "title": "Rose Bush - Red",
+    "description": "A classic red rose bush for your garden. Blooms beautifully in spring and summer.",
+    "category": "outdoor-plants",
+    "trending": true,
+    "coverImage": "rose-bush.jpg",
+    "oldPrice": 34,
+    "newPrice": 24
+  },
+  {
+    "_id": 4,
+    "title": "Gardening Tool Set",
+    "description": "A premium set of 5 gardening tools, including a trowel, pruner, gloves, and more. Perfect for beginners and pros alike.",
+    "category": "gardening-tools",
+    "trending": false,
+    "coverImage": "tool-set.jpg",
+    "oldPrice": 59,
+    "newPrice": 49
+  },
+  {
+    "_id": 5,
+    "title": "Ceramic Planters - Set of 3",
+    "description": "Elegant ceramic planters in neutral tones. Great for styling your indoor plants.",
+    "category": "accessories",
+    "trending": true,
+    "coverImage": "planters.jpg",
+    "oldPrice": 44,
+    "newPrice": 34
+  },
+  {
+    "_id": 6,
+    "title": "Lavender Plant",
+    "description": "Fragrant lavender plant for your garden or balcony. Attracts pollinators and adds a calming aroma.",
+    "category": "outdoor-plants",
+    "trending": true,
+    "coverImage": "lavender.jpg",
+    "oldPrice": 19,
+    "newPrice": 14
+  },
+  {
+    "_id": 7,
+    "title": "Fiddle Leaf Fig",
+    "description": "A trendy statement plant with large, violin-shaped leaves. Perfect for bright, airy spaces.",
+    "category": "indoor-plants",
+    "trending": true,
+    "coverImage": "fiddle-leaf.jpg",
+    "oldPrice": 69,
+    "newPrice": 59
+  },
+  {
+    "_id": 8,
+    "title": "Organic Potting Mix",
+    "description": "High-quality organic soil mix for all your planting needs. Enriched with nutrients for healthy growth.",
+    "category": "gardening-tools",
+    "trending": false,
+    "coverImage": "potting-mix.jpg",
+    "oldPrice": 14,
+    "newPrice": 9
+  },
+  {
+    "_id": 9,
+    "title": "Hanging Planters - Set of 2",
+    "description": "Macrame hanging planters for a bohemian touch. Ideal for trailing plants like pothos or ivy.",
+    "category": "accessories",
+    "trending": true,
+    "coverImage": "hanging-planters.jpg",
+    "oldPrice": 39,
+    "newPrice": 29
+  },
+  {
+    "_id": 10,
+    "title": "Snake Plant",
+    "description": "A hardy, low-maintenance plant that purifies the air. Great for beginners or busy plant parents.",
+    "category": "indoor-plants",
+    "trending": true,
+    "coverImage": "snake-plant.jpg",
+    "oldPrice": 29,
+    "newPrice": 19
+  },
+  {
+    "_id": 11,
+    "title": "Tomato Plant",
+    "description": "Grow your own juicy tomatoes at home! Comes with a starter pot and care instructions.",
+    "category": "outdoor-plants",
+    "trending": false,
+    "coverImage": "tomato-plant.jpg",
+    "oldPrice": 24,
+    "newPrice": 14
+  },
+  {
+    "_id": 12,
+    "title": "Watering Can - 1L",
+    "description": "A stylish and functional watering can with a long spout for precise watering.",
+    "category": "gardening-tools",
+    "trending": true,
+    "coverImage": "watering-can.jpg",
+    "oldPrice": 19,
+    "newPrice": 14
+  },
+  {
+    "_id": 13,
+    "title": "Bamboo Plant Stand",
+    "description": "A sleek, eco-friendly plant stand to display your favorite plants in style.",
+    "category": "accessories",
+    "trending": true,
+    "coverImage": "plant-stand.jpg",
+    "oldPrice": 49,
+    "newPrice": 39
+  },
+  {
+    "_id": 14,
+    "title": "Aloe Vera Plant",
+    "description": "A healing succulent that’s easy to care for. Perfect for sunny windowsills.",
+    "category": "indoor-plants",
+    "trending": false,
+    "coverImage": "aloe-vera.jpg",
+    "oldPrice": 19,
+    "newPrice": 14
+  },
+  {
+    "_id": 15,
+    "title": "Herb Garden Kit",
+    "description": "Grow your own herbs at home! Includes basil, mint, and parsley seeds with a starter pot.",
+    "category": "outdoor-plants",
+    "trending": true,
+    "coverImage": "herb-kit.jpg",
+    "oldPrice": 29,
+    "newPrice": 19
+  },
+  {
+    "_id": 16,
+    "title": "Plant Mister",
+    "description": "A fine mist spray bottle for keeping your tropical plants happy and hydrated.",
+    "category": "gardening-tools",
+    "trending": false,
+    "coverImage": "plant-mister.jpg",
+    "oldPrice": 12,
+    "newPrice": 9
+  },
+  {
+    "_id": 17,
+    "title": "Mini Terrarium Kit",
+    "description": "Create your own tiny ecosystem with this DIY terrarium kit. Includes everything you need!",
+    "category": "accessories",
+    "trending": true,
+    "coverImage": "terrarium-kit.jpg",
+    "oldPrice": 34,
+    "newPrice": 24
+  },
+  {
+    "_id": 18,
+    "title": "Pothos Plant",
+    "description": "A versatile trailing plant that thrives in low light. Perfect for shelves or hanging baskets.",
+    "category": "indoor-plants",
+    "trending": true,
+    "coverImage": "pothos.jpg",
+    "oldPrice": 24,
+    "newPrice": 19
+  },
+  {
+    "_id": 19,
+    "title": "Citrus Tree - Dwarf",
+    "description": "A compact citrus tree that produces fragrant flowers and edible fruit. Great for patios.",
+    "category": "outdoor-plants",
+    "trending": false,
+    "coverImage": "citrus-tree.jpg",
+    "oldPrice": 79,
+    "newPrice": 69
+  },
+  {
+    "_id": 20,
+    "title": "Plant Care Guidebook",
+    "description": "A comprehensive guide to keeping your plants healthy and thriving. Perfect for beginners!",
+    "category": "accessories",
+    "trending": true,
+    "coverImage": "guidebook.jpg",
+    "oldPrice": 19,
+    "newPrice": 14
+  }
+]
