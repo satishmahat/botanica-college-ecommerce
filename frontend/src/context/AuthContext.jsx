@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../firebase/firebase.config";
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup ,signOut} from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
@@ -12,6 +13,9 @@ const googleProvider = new GoogleAuthProvider();
 
 //authProvider
 export const AuthProvider = ({children}) => {
+
+    const navigate = useNavigate();
+
 
     const [currentUser, setCurrentUser] = useState(null)
     const [loading,setLoading] = useState(true)
@@ -34,8 +38,13 @@ export const AuthProvider = ({children}) => {
 
     //logout user
     const logoutUser = () => {
-        return signOut(auth)
-    }
+        return signOut(auth).then(() => {
+            localStorage.removeItem("cartItems"); // Clear cart on logout
+            navigate("/"); // Redirect 
+            window.location.reload(); // Full page refresh
+            
+        });
+    };
 
     //manage user
 
