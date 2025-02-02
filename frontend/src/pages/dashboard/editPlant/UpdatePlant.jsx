@@ -16,7 +16,7 @@ const UpdatePlant = () => {
   const { register, handleSubmit, setValue, reset } = useForm();
   useEffect(() => {
     if (plantData) {
-      setValue('name', plantData.name);
+      setValue('name', plantData.title);
       setValue('description', plantData.description);
       setValue('category', plantData?.category);
       setValue('trending', plantData.trending);
