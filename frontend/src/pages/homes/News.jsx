@@ -18,36 +18,36 @@ import { Link } from 'react-router-dom'
 
 
 const news = [
-    {
-        "id": 1,
-        "title": "Global Climate Summit Calls for Urgent Action",
-        "description": "World leaders gather at the Global Climate Summit to discuss urgent strategies to combat climate change, focusing on reducing carbon emissions and fostering renewable energy solutions.",
-        "image": news1
-    },
-    {
-        "id": 2,
-        "title": "Breakthrough in AI Technology Announced",
-        "description": "A major breakthrough in artificial intelligence has been announced by researchers, with new advancements promising to revolutionize industries from healthcare to finance.",
-        "image": news2
-    },
-    {
-        "id": 3,
-        "title": "New Space Mission Aims to Explore Distant Galaxies",
-        "description": "NASA has unveiled plans for a new space mission that will aim to explore distant galaxies, with hopes of uncovering insights into the origins of the universe.",
-        "image": news3
-    },
-    {
-        "id": 4,
-        "title": "Stock Markets Reach Record Highs Amid Economic Recovery",
-        "description": "Global stock markets have reached record highs as signs of economic recovery continue to emerge following the challenges posed by the global pandemic.",
-        "image": news4
-    },
-    {
-        "id": 5,
-        "title": "Innovative New Smartphone Released by Leading Tech Company",
-        "description": "A leading tech company has released its latest smartphone model, featuring cutting-edge technology, improved battery life, and a sleek new design.",
-        "image": news2
-    }
+  {
+      "id": 1,
+      "title": "Sustainable Plant Sourcing Initiative Launches",
+      "description": "Leading online plant retailers collaborate to develop a comprehensive sustainable sourcing program, focusing on responsible cultivation, fair trade practices, and reducing carbon footprint in plant distribution.",
+      "image": news1
+  },
+  {
+      "id": 2,
+      "title": "AI-Powered Plant Care Recommendations Breakthrough",
+      "description": "A major advancement in plant care technology enables personalized plant recommendation systems, using AI to match customers with ideal plants based on home environment, lifestyle, and care capabilities.",
+      "image": news2
+  },
+  {
+      "id": 3,
+      "title": "Vertical Farming Startup Expands Direct-to-Consumer Plant Delivery",
+      "description": "An innovative vertical farming company unveils plans to revolutionize online plant sales by providing ultra-fresh, locally grown plants with direct shipping to urban consumers, reducing transportation emissions and delivery times.",
+      "image": news3
+  },
+  {
+      "id": 4,
+      "title": "Global Plant E-Commerce Market Reaches Record Growth",
+      "description": "Online plant sales continue to surge, with global markets showing unprecedented growth as more consumers embrace indoor gardening, plant collecting, and green living trends.",
+      "image": news4
+  },
+  {
+      "id": 5,
+      "title": "New Mobile App Transforms Plant Shopping Experience",
+      "description": "A cutting-edge mobile application launches, offering augmented reality plant placement, comprehensive care guides, community support, and seamless purchasing for plant enthusiasts worldwide.",
+      "image": news2
+  }
 ]
 
 const News = () => {
