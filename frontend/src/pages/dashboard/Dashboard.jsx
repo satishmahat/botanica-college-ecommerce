@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Loading from '../../components/Loading';
 import getBaseUrl from '../../utils/baseURL';
 import { MdIncompleteCircle } from 'react-icons/md'
-import RevenueChart from './RevenueChart';
+import DashboardOrders from './DashboardOrders';
 
 const Dashboard = () => {
     const [loading, setLoading] = useState(true);
@@ -67,8 +67,7 @@ const Dashboard = () => {
                   </svg>
                 </div>
                 <div>
-                  <span className="inline-block text-2xl font-bold">{data?.trendingBooks}</span>
-                  <span className="inline-block text-xl text-gray-500 font-semibold">(13%)</span>
+                  <span className="inline-block text-2xl font-bold">{data?.trendingPlants}</span>
                   <span className="block text-gray-500">Trending Books in This Month</span>
                 </div>
               </div>
@@ -83,8 +82,7 @@ const Dashboard = () => {
               </div>
             </section>
 
-            
-            <RevenueChart />
+            <DashboardOrders/>
             
               
     
