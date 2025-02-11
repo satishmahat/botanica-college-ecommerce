@@ -1,5 +1,5 @@
 const express = require('express');
-const { createAOrder, getOrderByEmail , getAllOrders} = require('./order.controller');
+const { createAOrder, getOrderByEmail , getAllOrders , updateOrderStatus} = require('./order.controller');
 
 const router =  express.Router();
 
@@ -11,5 +11,8 @@ router.get("/email/:email", getOrderByEmail);
 
 //get all orders
 router.get("/", getAllOrders);
+
+// Update order status
+router.put("/:id", updateOrderStatus);
 
 module.exports = router;

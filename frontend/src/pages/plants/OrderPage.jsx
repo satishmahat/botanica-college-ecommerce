@@ -19,7 +19,10 @@ const OrderPage = () => {
                     {
                         orders.map((order, index) => (
                             <div key={order._id} className="border-b mb-4 pb-4">
-                                <p className='p-1 bg-secondary text-white w-10 rounded mb-1'># {index + 1}</p>
+                                <div className='flex gap-2'>
+                                <h3 className='p-1 bg-secondary text-white w-10 rounded mb-1'># {index + 1}</h3>
+                                <h3 className='p-1 bg-white text-secondary border rounded border-secondary mb-1'>Status :  {order.status.charAt(0).toUpperCase() + order.status.slice(1)}</h3>
+                                </div>
                                 <h2 className="font-bold">Order ID: {order._id}</h2>
                                 <p className="text-gray-600">Name: {order.name}</p>
                                 <p className="text-gray-600">Email: {order.email}</p>

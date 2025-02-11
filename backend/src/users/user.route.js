@@ -14,7 +14,7 @@ router.post("/admin", async (req, res) => {
             res.status(404).send({message: "Admin Not Found"})
         }
         if(admin.password !== password){
-            res.status(401).send({messaage: "Invalid Password."})   
+            res.status(401).send({message: "Invalid Password."})   
         }
         const token = jwt.sign(
             {id: admin._id, username: admin.username, role: admin.role},
@@ -33,7 +33,7 @@ router.post("/admin", async (req, res) => {
 
     } catch (error) {
         console.error("Failed to login as Admin.",error)
-        res.status(401).send({messaage: "Failed to login as Admin."})
+        res.status(401).send({message: "Failed to login as Admin."})
     }
 })
 

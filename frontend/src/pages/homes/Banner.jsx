@@ -12,7 +12,7 @@ const Banner = () => {
             <h1 className='md:text-5xl text-2xl font-medium mb-7'>Green Arrivals This Season</h1>
             <p className='mb-10'>Discover the latest botanical treasures and plant care innovations that will transform your home and garden. From rare exotic specimens to smart indoor gardening solutions, our curated collection brings nature's most exciting new releases right to your doorstep.</p>
 
-            <button className='bg-green-500 hover:bg-green-700 text-white rounded-lg shadow-md px-4 py-2'>Subscribe</button>
+            <button className='bg-green-800 hover:bg-green-700 text-white rounded-lg shadow-md px-4 py-2'>Subscribe</button>
         </div>
 
        

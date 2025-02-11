@@ -1,8 +1,18 @@
 import React from "react";
-import { useGetAllOrdersQuery } from "../../redux/features/orders/ordersApi";
+import { useGetAllOrdersQuery, useUpdateOrderStatusMutation } from "../../redux/features/orders/ordersApi";
 
 const DashboardOrders = () => {
   const { data: orders = [], isLoading, isError } = useGetAllOrdersQuery();
+  const [updateOrderStatus] = useUpdateOrderStatusMutation();
+
+  const handleStatusChange = async (orderId, newStatus) => {
+    try {
+      await updateOrderStatus({ id: orderId, status: newStatus }).unwrap();
+    } catch (error) {
+      console.error("Failed to update order status", error);
+    }
+};
+
 
   if (isLoading) return <p className="text-center py-6">Loading orders...</p>;
   if (isError) return <p className="text-center text-red-500 py-6">Failed to load orders.</p>;
@@ -22,6 +32,7 @@ const DashboardOrders = () => {
               <th className="py-2 px-4 border">Total Price</th>
               <th className="py-2 px-4 border">Address</th>
               <th className="py-2 px-4 border">Products</th>
+              <th className="py-2 px-4 border">Status</th>
             </tr>
           </thead>
           <tbody>
@@ -44,11 +55,24 @@ const DashboardOrders = () => {
                       ))}
                     </ul>
                   </td>
+                  <td className="py-2 px-4">
+                    <select
+                      className="border p-1 rounded cursor-pointer"
+                      value={order.status}
+                      onChange={(e) => handleStatusChange(order._id, e.target.value)}
+                    >
+                      <option value="pending">Pending</option>
+                      <option value="processing">Processing</option>
+                      <option value="shipped">Shipped</option>
+                      <option value="delivered">Delivered</option>
+                      <option value="cancelled">Cancelled</option>
+                    </select>
+                  </td>
                 </tr>
               ))
             ) : (
               <tr>
-                <td colSpan="8" className="py-4 text-center text-gray-500">
+                <td colSpan="9" className="py-4 text-center text-gray-500">
                   No orders found.
                 </td>
               </tr>
