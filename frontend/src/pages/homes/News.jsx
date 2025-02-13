@@ -1,8 +1,9 @@
 import React from 'react'
-import news1 from "../../assets/news/news-1.png"
-import news2 from "../../assets/news/news-2.png"
-import news3 from "../../assets/news/news-3.png"
-import news4 from "../../assets/news/news-4.png"
+import news1 from "../../assets/news/plantnews-1.jpg"
+import news2 from "../../assets/news/plantnews-2.jpg"
+import news3 from "../../assets/news/plantnews-3.jpg"
+import news4 from "../../assets/news/plantnews-4.jpg"
+import news5 from "../../assets/news/plantnews-5.jpg"
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -46,7 +47,7 @@ const news = [
       "id": 5,
       "title": "New Mobile App Transforms Plant Shopping Experience",
       "description": "A cutting-edge mobile application launches, offering augmented reality plant placement, comprehensive care guides, community support, and seamless purchasing for plant enthusiasts worldwide.",
-      "image": news2
+      "image": news5
   }
 ]
 
@@ -61,13 +62,9 @@ const News = () => {
         navigation={true}
 
         breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
           768: {
-            slidesPerView: 2,
-            spaceBetween: 40,
+            slidesPerView: 1,
+            spaceBetween: 30,
           },
           1024: {
             slidesPerView: 2,
@@ -81,7 +78,7 @@ const News = () => {
         {
             news.map((item , index) => (
                 <SwiperSlide key={index}>
-                    <div className='flex flex-col sm:flex-row sm:justify-between items-center gap-12'>
+                    <div className='flex flex-col sm:flex-row sm:justify-between items-center sm:gap-12'>
                         {/* content */}
                         <div className='py-4'>
                             <Link to="/"><h3 className='text-lg font-medium hover:text-blue-500 mb-4'>{item.title}</h3></Link>
@@ -89,10 +86,13 @@ const News = () => {
                             <p className='text-sm text-gray-600'>{item.description}</p>
                         </div>
 
-                        <div className='flex-shrink-0'>
-                            <img src={item.image} alt="" className='w-full object-cover'/>
+                        <div className="flex-shrink-0 w-[150px] sm:w-[150px] md:w-[180px] lg:w-[200px]">
+                            <img 
+                                src={item.image} 
+                                alt="" 
+                                className="w-full h-auto object-cover rounded-lg"
+                            />
                         </div>
-
                     </div>
                 </SwiperSlide>
             ))
