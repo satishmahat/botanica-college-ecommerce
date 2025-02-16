@@ -51,7 +51,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/plants/:id",
-                element: <SinglePlant />,  // Changed to SinglePlant
+                element: <SinglePlant />, 
             }
         ]
     },
@@ -68,15 +68,15 @@ const router = createBrowserRouter([
                 element: <AdminRoute><Dashboard /></AdminRoute>,
             },
             {
-                path: "add-new-plant",  // Changed to AddPlant
+                path: "add-new-plant",  
                 element: <AdminRoute><AddPlant /></AdminRoute>,
             },
             {
-                path: "edit-plant/:id",  // Changed to UpdatePlant
+                path: "edit-plant/:id",  
                 element: <AdminRoute><UpdatePlant /></AdminRoute>,
             },
             {
-                path: "manage-plants",  // Changed to ManagePlants
+                path: "manage-plants",  
                 element: <AdminRoute><ManagePlants /></AdminRoute>,
             }
         ]
