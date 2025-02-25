@@ -29,7 +29,7 @@ const TopSellers = () => {
 
     return (
         <div className='py-10 md:px-16'>
-            <h2 className='text-3xl font-semibold mb-6'>Top Sellers</h2>
+            <h2 className='text-3xl font-semibold mb-6'>Our Catalogue</h2>
             {/* category filtering */}
             <div className='mb-8 flex items-center'>
                 <select

@@ -1,28 +1,33 @@
-const express = require('express');
-
-const { postAPlant, getAllPlants, getSinglePlant, UpdatePlant, deleteAPlant } = require('./plant.controller');
-const verifyAdminToken = require('../middleware/verifyAdminToken');
+import express from 'express';
+import { 
+    postAPlant, 
+    getAllPlants, 
+    getSinglePlant, 
+    UpdatePlant, 
+    deleteAPlant 
+} from './plant.controller.js';
+import verifyAdminToken from '../middleware/verifyAdminToken.js';
 
 const router = express.Router();
 
-//frontend => backend => controller => plant schema => database => send data to server => back to the frontend
-//post when we need to submit something from frontend to db
-//get when we need something from db
-//put/patch when we edit or update data
-//delete = when we need to delete
+// Frontend => Backend => Controller => Plant Schema => Database => Send data to server => Back to the frontend
+// POST: Submit data from frontend to database
+// GET: Retrieve data from database
+// PUT/PATCH: Edit or update data
+// DELETE: Remove data from database
 
 router.post('/create-plant', verifyAdminToken, postAPlant);
 
-//get all plants
+// Get all plants
 router.get('/', getAllPlants);
 
-//single plant endpoint
+// Single plant endpoint
 router.get('/:id', getSinglePlant);
 
-//update a plant endpoint
+// Update a plant endpoint
 router.put('/edit/:id', UpdatePlant);
 
-//delete
+// Delete a plant
 router.delete('/:id', deleteAPlant);
 
-module.exports = router;
+export default router;

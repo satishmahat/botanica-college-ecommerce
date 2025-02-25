@@ -1,9 +1,7 @@
-const mongooes = require('mongoose')
-const bcrypt = require('bcrypt');
+import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
 
-
-
-const userSchema = new mongooes.Schema({
+const userSchema = new mongoose.Schema({
     username: {
         type: String,
         required: true,
@@ -15,17 +13,18 @@ const userSchema = new mongooes.Schema({
     },
     role: {
         type: String,
-        enum: ['user','admin'],
+        enum: ['user', 'admin'],
         required: true
     }
-})
+});
 
-userSchema.pre('save', async function(next){
-    if(!this.isModified('password')) return next();
-    this.password = await bcrypt.hash(this.password,10)
+userSchema.pre('save', async function (next) {
+    if (!this.isModified('password')) return next();
+    this.password = await bcrypt.hash(this.password, 10);
     next();
-})
+});
 
-const User = mongooes.model('User', userSchema)
+const User = mongoose.model('User', userSchema);
 
-module.exports = User
+
+export default User;

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose';
 
 const orderSchema = new mongoose.Schema({
     name: {
@@ -9,7 +9,7 @@ const orderSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    address:{
+    address: {
         city: {
             type: String,
             required: true,
@@ -18,24 +18,15 @@ const orderSchema = new mongoose.Schema({
             type: String,
             required: true,
         },
-        state: {
-            type: String,
-            required: true,
-        },
-        zipcode: {
-            type: String,
-            required: true,
-        },
-        
     },
-    phone:{
+    phone: {
         type: Number,
         required: true,
     },
-    productIds:[{
+    productIds: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Book',
-        require: true,
+        ref: 'Plant',
+        required: true,
     }],
     totalPrice: {
         type: Number,
@@ -45,14 +36,9 @@ const orderSchema = new mongoose.Schema({
         type: String,
         enum: ['pending', 'processing', 'shipped', 'delivered', 'cancelled'],
         default: 'pending',
-      },
+    },
+}, { timestamps: true });
 
-  }, {
-    timestamps: true
-  });
+const Order = mongoose.model('Order', orderSchema);
 
-
-
-  const Order = mongoose.model('Order', orderSchema);
-
-  module.exports = Order;
+export default Order;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import { FaGoogle } from "react-icons/fa"
 
 import { useForm } from "react-hook-form"
@@ -9,6 +9,8 @@ const Register = () => {
 
     const [message,setMessage] = useState("")
     const {registerUser, signInWithGoogle} = useAuth()
+    const navigate = useNavigate();
+    
 
         const {
             register,
@@ -24,6 +26,7 @@ const Register = () => {
             try{
                 await registerUser(data.email, data.password)
                 alert("User Registered Successfully")
+                navigate("/")
             }catch(error){
                 setMessage("Please provide valid Email and Password")
             }

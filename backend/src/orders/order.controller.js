@@ -1,4 +1,4 @@
-const Order = require("./order.model");
+import Order from './order.model.js';
 
 // Create an order
 const createAOrder = async (req, res) => {
@@ -21,7 +21,7 @@ const getOrderByEmail = async (req, res) => {
         if (!orders || orders.length === 0) {
             return res.status(404).json({ message: "No orders found for this email" });
         }
-        
+
         res.status(200).json(orders);
     } catch (error) {
         console.error("Error fetching order", error);
@@ -68,9 +68,9 @@ const updateOrderStatus = async (req, res) => {
     }
 };
 
-module.exports = {
+export {
     createAOrder,
     getOrderByEmail,
-    getAllOrders, 
-    updateOrderStatus 
+    getAllOrders,
+    updateOrderStatus
 };

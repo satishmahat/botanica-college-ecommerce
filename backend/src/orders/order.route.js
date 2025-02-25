@@ -1,7 +1,7 @@
-const express = require('express');
-const { createAOrder, getOrderByEmail , getAllOrders , updateOrderStatus} = require('./order.controller');
+import express from 'express';
+import { createAOrder, getOrderByEmail, getAllOrders, updateOrderStatus } from './order.controller.js';
 
-const router =  express.Router();
+const router = express.Router();
 
 // create order endpoint
 router.post("/", createAOrder);
@@ -9,10 +9,10 @@ router.post("/", createAOrder);
 // get orders by user email 
 router.get("/email/:email", getOrderByEmail);
 
-//get all orders
+// get all orders
 router.get("/", getAllOrders);
 
 // Update order status
 router.put("/:id", updateOrderStatus);
 
-module.exports = router;
+export default router;

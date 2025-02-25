@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const plantSchema = new mongoose.Schema({
     title: {
@@ -39,4 +39,4 @@ const plantSchema = new mongoose.Schema({
 
 const Plant = mongoose.model('Plant', plantSchema);
 
-module.exports = Plant;
+export default Plant;

@@ -1,7 +1,8 @@
-const mongoose = require('mongoose');
-const express = require('express');
-const Order = require('../orders/order.model');
-const Plant = require('../plants/plant.model'); // Updated from Book to Plant
+import mongoose from 'mongoose';
+import express from 'express';
+import Order from '../orders/order.model.js';
+import Plant from '../plants/plant.model.js'; // Updated from Book to Plant
+
 const router = express.Router();
 
 // Function to calculate admin stats
@@ -20,19 +21,19 @@ router.get("/", async (req, res) => {
             }
         ]);
 
-        // 4. Trending plants statistics:
+        // 3. Trending plants statistics:
         const trendingPlantsCount = await Plant.aggregate([
             { $match: { trending: true } }, // Match only trending plants
             { $count: "trendingPlantsCount" } // Return the count of trending plants
         ]);
 
-        // If you want just the count as a number, you can extract it like this:
+        // Extract count as a number
         const trendingPlants = trendingPlantsCount.length > 0 ? trendingPlantsCount[0].trendingPlantsCount : 0;
 
-        // 5. Total number of plants
+        // 4. Total number of plants
         const totalPlants = await Plant.countDocuments();
 
-        // 6. Monthly sales (group by month and sum total sales for each month)
+        // 5. Monthly sales (group by month and sum total sales for each month)
         const monthlySales = await Order.aggregate([
             {
                 $group: {
@@ -59,4 +60,4 @@ router.get("/", async (req, res) => {
     }
 });
 
-module.exports = router;
+export default router;
