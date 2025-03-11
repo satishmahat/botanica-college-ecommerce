@@ -34,7 +34,7 @@ const PlantCard = ({ plant }) => {
                 </h3></Link>
                 <p className="text-gray-600 mb-5">{plant?.description.length > 80 ? `${plant?.description.slice(0, 70)}...` : plant?.description}</p>
                 <p className="font-medium mb-5">
-                    ${plant?.newPrice}<span className="line-through font-normal ml-2">{plant?.oldPrice}</span>
+                    Rs. {plant?.newPrice}<span className="line-through font-normal ml-2">Rs. {plant?.oldPrice}</span>
                 </p>
                 <button 
                 onClick={() => handleAddToCart(plant)}

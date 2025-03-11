@@ -127,7 +127,7 @@ const UpdatePlant = () => {
           register={register}
         />
 
-        <button type="submit" className="w-full py-2 bg-blue-500 text-white font-bold rounded-md">
+        <button type="submit" className="w-full py-2 bg-green-800 text-white font-bold rounded-md">
           Update Plant
         </button>
       </form>

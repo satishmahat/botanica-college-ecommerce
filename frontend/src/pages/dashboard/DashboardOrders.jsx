@@ -44,7 +44,7 @@ const DashboardOrders = () => {
                   <td className="py-2 px-4">{order.name}</td>
                   <td className="py-2 px-4">{order.email}</td>
                   <td className="py-2 px-4">{order.phone}</td>
-                  <td className="py-2 px-4">${order.totalPrice}</td>
+                  <td className="py-2 px-4">Rs. {order.totalPrice}</td>
                   <td className="py-2 px-4">
                     {order.address.city}, {order.address.state}, {order.address.country}, {order.address.zipcode}
                   </td>

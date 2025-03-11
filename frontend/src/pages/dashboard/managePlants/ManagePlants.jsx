@@ -32,7 +32,7 @@ const ManagePlants = () => {
                             <h3 className="font-semibold text-base text-blueGray-700">All Plants</h3>
                         </div>
                         <div className="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
-                            <button className="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">See all</button>
+                            <button className="bg-green-800 text-white active:bg-green-900 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">See all</button>
                         </div>
                     </div>
                 </div>
@@ -73,10 +73,10 @@ const ManagePlants = () => {
                                       {plant.category}
                                     </td>
                                     <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                        ${plant.newPrice}
+                                        Rs. {plant.newPrice}
                                     </td>
                                     <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 space-x-4">
-                                        <Link to={`/dashboard/edit-plant/${plant._id}`} className="font-medium text-indigo-600 hover:text-indigo-700 mr-2 hover:underline underline-offset-2">
+                                        <Link to={`/dashboard/edit-plant/${plant._id}`} className="font-medium text-green-800 hover:text-green-900 mr-2 hover:underline underline-offset-2">
                                             Edit
                                         </Link>
                                         <button 

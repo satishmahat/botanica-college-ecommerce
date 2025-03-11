@@ -22,8 +22,8 @@ router.post('/khalti/initiate', async (req, res) => {
                 'Authorization': `Key ${KHALTI_SECRET_KEY}`
             },
             body: JSON.stringify({
-                return_url: 'http://localhost:5173/orders', // Redirect user back
-                website_url: 'http://localhost:5173/', // Required field
+                return_url: 'http://localhost:5173/payment-callback', // Updated return URL
+                website_url: 'http://localhost:5173/',
                 amount,
                 purchase_order_id: `order-${Date.now()}`,
                 purchase_order_name: 'Plant Order'
